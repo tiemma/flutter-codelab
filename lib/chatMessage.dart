@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
+
 
 class ChatMessage extends StatelessWidget {
 
@@ -8,10 +10,11 @@ class ChatMessage extends StatelessWidget {
   final String text;
   final AnimationController animationController;
 
-  String _name = "Bakare Emmanuel";
+  final wordPair = new WordPair.random();
 
   @override
   Widget build(BuildContext context) {
+    String _name = wordPair.asPascalCase;
     return new SizeTransition(
       // opacity: new CurvedAnimation(
       //   parent: animationController,
