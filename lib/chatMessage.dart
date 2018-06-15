@@ -4,17 +4,25 @@ import 'package:english_words/english_words.dart';
 
 class ChatMessage extends StatelessWidget {
 
+  //This is the constructor for the class ChatMessage
+  //In this, we state that the ChatMessage class will
+  //have a text and animationController variable
   ChatMessage({this.text, this.animationController});
 
 
   final String text;
   final AnimationController animationController;
 
+  //Generate a pair of two words
   final wordPair = new WordPair.random();
 
   @override
   Widget build(BuildContext context) {
+
+    //Get the name from the wordpair object
     String _name = wordPair.asPascalCase;
+
+
     return new SizeTransition(
       // opacity: new CurvedAnimation(
       //   parent: animationController,
